@@ -5,9 +5,10 @@
 <script lang="ts">
   export let theme: 'primary' | 'secondary'
   export let size: 'xs' | 'sm' | 'base' | 'lg' | 'xl'
+  export let block: boolean = false
 
   const className = () => {
-    const baseClassName = () => ('inline-flex items-center border border-transparent shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2')
+    const baseClassName = () => ('inline-flex items-center border border-transparent shadow-sm transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2')
     const themeClassName = () => {
       if (theme === 'primary') {
         return 'bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-indigo-500'
@@ -32,7 +33,10 @@
         return ''
       }
     }
+    const widthClassName = () => {
+      return block ? 'flex flex-row justify-center items-center w-full' : ''
+    }
 
-    return `${baseClassName()} ${themeClassName()} ${sizeClassName()}`
+    return `${baseClassName()} ${themeClassName()} ${sizeClassName()} ${widthClassName()}`
   }
 </script>
