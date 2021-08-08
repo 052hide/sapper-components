@@ -4,5 +4,5 @@
 </main>
 
 <script lang="ts">
-  import GlobalStyle from "../components/GlobalStyle.svelte";
+  import GlobalStyle from '../components/GlobalStyle.svelte';
 </script>

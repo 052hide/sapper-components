@@ -3,13 +3,9 @@
 </svelte:head>
 
 <div class="p-8">
-<Button
-  theme={'secondary'}
-  size={'base'}
-  block={true}
->Button</Button>
+  <Button theme={'secondary'} size={'base'} block={true}>Button</Button>
 </div>
 
-<script lang='ts'>
-  import Button from '../components/Button/index.svelte'
+<script lang="ts">
+  import Button from '../components/Button/index.svelte';
 </script>
