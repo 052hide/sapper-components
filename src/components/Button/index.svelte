@@ -8,7 +8,7 @@
   export let block: boolean = false
 
   const className = () => {
-    const baseClassName = () => ('inline-flex items-center border border-transparent shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2')
+    const baseClassName = () => ('inline-flex items-center border border-transparent shadow-sm transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2')
     const themeClassName = () => {
       if (theme === 'primary') {
         return 'bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-indigo-500'
