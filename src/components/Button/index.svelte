@@ -5,6 +5,7 @@
 <script lang="ts">
   export let theme: 'primary' | 'secondary'
   export let size: 'xs' | 'sm' | 'base' | 'lg' | 'xl'
+  export let block: boolean = false
 
   const className = () => {
     const baseClassName = () => ('inline-flex items-center border border-transparent shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2')
@@ -32,7 +33,10 @@
         return ''
       }
     }
+    const widthClassName = () => {
+      return block ? 'flex flex-row justify-center items-center w-full' : ''
+    }
 
-    return `${baseClassName()} ${themeClassName()} ${sizeClassName()}`
+    return `${baseClassName()} ${themeClassName()} ${sizeClassName()} ${widthClassName()}`
   }
 </script>
